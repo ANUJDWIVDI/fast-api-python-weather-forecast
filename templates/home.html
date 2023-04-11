@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Application</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            display: block;
+            margin: auto;
+            font-size: 24px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        #options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather Application</h1>
+    <div id="options">
+        <button onclick="location.href='/manual'">Manual Location</button>
+        <button onclick="location.href='/famous'">Famous Cities</button>
+    </div>
+</body>
+</html>

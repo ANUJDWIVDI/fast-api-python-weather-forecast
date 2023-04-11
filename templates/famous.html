@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Application</title>
+</head>
+<body>
+    <h1>Weather Application</h1>
+    <form method="post" action="/weather">
+        <label for="location">Enter your location:</label>
+        <select name="location" id="location">
+            <option value="" selected disabled>Select a location</option>
+            {% for city, coordinates in cities.items() %}
+                <option value="{{ city }}" data-latitude="{{ coordinates.latitude }}" data-longitude="{{ coordinates.longitude }}">{{ city }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <br><br>
+        <input type="submit" value="Predict">
+    </form>
+    <script>
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            const locationInput = document.getElementById("location_input");
+            locationInput.value = latitude + "," + longitude;
+            locationInput.style.display = "block";
+            const locationDropdown = document.getElementById("location");
+            locationDropdown.selectedIndex = 0;
+        }
+
+        const locationDropdown = document.getElementById("location");
+        const locationInput = document.getElementById("location_input");
+        locationDropdown.addEventListener("change", function() {
+            const latitude = this.options[this.selectedIndex].getAttribute("data-latitude");
+            const longitude = this.options[this.selectedIndex].getAttribute("data-longitude");
+            if (latitude && longitude) {
+                locationInput.value = latitude + "," + longitude;
+                locationInput.style.display = "block";
+            } else {
+                locationInput.value = "";
+                locationInput.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>

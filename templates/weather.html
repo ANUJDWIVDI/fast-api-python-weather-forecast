@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="../static/css/weather.css">
+</head>
+<body class="{{ weather.description | lower }}">
+    <div class="weather-container">
+        <div class="weather-header">
+            <h1>{{ weather.location }}</h1>
+            <p>{{ weather.description }}</p>
+        </div>
+        <div class="weather-main">
+            <div class="weather-icon">
+                <img src="{{ weather.icon }}" alt="{{ weather.description }}">
+            </div>
+            <div class="weather-details">
+                <ul>
+                    <li>Temperature: {{ weather.temperature }}&deg;C</li>
+                    <li>Humidity: {{ weather.humidity }}%</li>
+                    <li>Wind Speed: {{ weather.wind_speed }} km/h</li>
+                </ul>
+            </div>
+        </div>
+        <div class="weather-forecast">
+            <h3>Forecast</h3>
+            <div class="forecast-icon">
+                <img src="{{ weather.forecast_icon }}" alt="{{ weather.forecast }}">
+            </div>
+            <div class="forecast-details">
+                <p>{{ weather.forecast }}</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/weather.js"></script>
+</body>
+</html>

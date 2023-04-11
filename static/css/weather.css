@@ -1,0 +1,99 @@
+/* For sunny weather */
+.sun {
+    background-image: url('sunny-background--img.jfif');
+}
+
+/* For rainy weather */
+.rain {
+    background-image: url('rainy-background.gif');
+}
+/* Styles for the body element, which sets the background color based on the weather condition */
+.clear {
+    background-color: #ffffff;
+}
+
+.cloudy {
+    background-color: #c6c6c6;
+}
+
+.rainy {
+    background-color: #a1a1a1;
+}
+
+.snowy {
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, #ffffff 50%, #b1b1b1 50%);
+    background-size: 100% 20px;
+}
+
+.sunny {
+    background-color: #ffc107;
+}
+
+/* Styles for the container that holds all the weather information */
+.weather-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styles for the header section, which displays the location and weather description */
+.weather-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.weather-header h1 {
+    font-size: 36px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.weather-header p {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Styles for the main weather section, which displays the current weather icon and details */
+.weather-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weather-icon img {
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.weather-details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.weather-details li {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Styles for the forecast section, which displays the forecast icon and text */
+.weather-forecast {
+    text-align: center;
+}
+
+.weather-forecast h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.forecast-icon img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.forecast-details p {
+    font-size: 24px;
+    margin: 0;
+}
