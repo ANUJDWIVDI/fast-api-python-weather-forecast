@@ -5,7 +5,7 @@ import requests
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
-weatherstack_api_key = "03a87c533f4f9a8e434d480dd4c1c997"
+weatherstack_api_key = "003a87c533f4f9a8e434d480dd4c1c997"
 
 
 
